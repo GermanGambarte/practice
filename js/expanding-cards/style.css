@@ -1,0 +1,72 @@
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #282828;
+  color: white;
+  display: grid;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  height: 100vh;
+  place-content: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+  height: 100vh;
+  padding-block: 1rem;
+  width: 90vw;
+}
+
+.panel {
+  margin-inline: auto;
+  background-position: center;
+  border-radius: 1rem;
+  cursor: pointer;
+  display: grid;
+  flex: 0.5;
+  max-width: 700px;
+  max-height: 700px;
+  width: 100%;
+  object-fit: contain;
+  overflow: hidden;
+  place-items: end;
+  transition: flex 400ms cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+.panel-title {
+  opacity: 0;
+  filter: drop-shadow(5px 5px 10px #000);
+  padding-bottom: 0.5rem;
+  text-align: center;
+  width: 100%;
+  transition: opacity 200ms ease-in 100ms;
+}
+
+.active {
+  aspect-ratio: 1/1;
+  flex: 5;
+}
+
+.panel.active .panel-title {
+  opacity: 1;
+}
+
+@media screen and (min-width: 925px) {
+  .container {
+    flex-direction: row;
+    max-width: 80vw;
+    align-items: center;
+  }
+  .panel {
+    height: 100%;
+  }
+}
