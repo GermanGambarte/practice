@@ -1,0 +1,11 @@
+.birthday {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.birthday-age {
+  color: #0006;
+  /* font-weight: bold; */
+  font-size: 0.9rem;
+}
