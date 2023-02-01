@@ -1,0 +1,14 @@
+main {
+  display: grid;
+  gap: 4rem;
+}
+
+.container {
+  margin-inline: max(calc(100vw - 50rem) / 2, 1rem);
+  padding-block-end: 4rem;
+}
+
+.container-title {
+  padding-block: 2rem;
+  text-align: center;
+}
