@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tip Calculator</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="./script.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <form class="form" id="form">
+        <div class="number-wrapper">
+          <label class="label" for="bill">Bill</label>
+          <div class="input-wrapper">
+            <span class="dollar">$</span>
+            <input
+              class="input input__number"
+              step="0.01"
+              type="number"
+              id="bill"
+            />
+          </div>
+        </div>
+        <div class="range-wrapper">
+          <div class="text-wrapper">
+            <label class="label" for="tip">Tip %</label>
+            <span id="tipPersentage">50%</span>
+          </div>
+          <input
+            class="input input__range"
+            min="0"
+            max="100"
+            value="15"
+            type="range"
+            id="tip"
+          />
+        </div>
+        <div class="range-wrapper">
+          <div class="text-wrapper">
+            <label class="label" for="people">No. Of People</label>
+            <p id="numberOfPeople">5</p>
+          </div>
+          <input
+            class="input input__range"
+            min="1"
+            max="100"
+            value="1"
+            type="range"
+            id="people"
+          />
+        </div>
+      </form>
+      <div class="total-container">
+        <div class="bill-wrapper">
+          <p class="bill-label">Total Bill</p>
+          <span class="bill-total" id="billTotal">$0.00</span>
+        </div>
+        <div class="tip-wrapper">
+          <p class="tip-label">Total Tip</p>
+          <span class="tip-total" id="tipTotal">$0.00</span>
+        </div>
+        <div class="divider"></div>
+        <div class="total-wrapper">
+          <p class="total-label">Total Amount</p>
+          <span class="total-amount" id="totalAmount">$0.00</span>
+        </div>
+        <div class="person-wrapper">
+          <p class="person-label">Total Per Person</p>
+          <span class="person-total" id="totalPerPerson">$0.00</span>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
