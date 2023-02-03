@@ -29,6 +29,7 @@ export const App = () => {
     const filteredList = giftList.filter(gift => gift.id !== id);
     setGiftList(filteredList);
   };
+  const deleteAllGift = () => setGiftList([]);
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Lista de Regalos</Text>
@@ -44,6 +45,11 @@ export const App = () => {
           </View>
         ))}
       </View>
+      <TouchableOpacity
+        onPress={() => deleteAllGift()}
+        style={styles.deleteAllBtn}>
+        <Text>Borrar todo</Text>
+      </TouchableOpacity>
       <View style={styles.form}>
         <TextInput
           onSubmitEditing={createGift}
@@ -91,6 +97,15 @@ const styles = StyleSheet.create({
     paddingHorizontal: 10,
     paddingVertical: 5,
   },
+  deleteAllBtn: {
+    backgroundColor: '#b02525',
+    width: '90%',
+    // height: 20,
+    alignSelf: 'center',
+    alignItems: 'center',
+    paddingVertical: 10,
+    borderRadius: 10,
+  },
   form: {
     alignItems: 'center',
     flexDirection: 'row',
@@ -111,7 +126,7 @@ const styles = StyleSheet.create({
     aspectRatio: '1/1',
     backgroundColor: '#1864ab',
     borderRadius: 999,
-    paddingTop: 6,
+    justifyContent: 'center',
     width: 50,
   },
   formBtnText: {
