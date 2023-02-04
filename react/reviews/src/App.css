@@ -1,0 +1,73 @@
+body {
+  /* display: grid;
+  place-content: center; */
+  background-color: #eff5fb;
+}
+
+h1 {
+  text-align: center;
+  padding-block: 5rem;
+}
+
+main {
+  margin-inline: max(calc(100vw - 40rem) / 2, 1rem);
+  text-align: center;
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+.btn-container {
+  display: grid;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.arrows-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+.btn {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  cursor: pointer;
+  box-shadow: 0 0 0 -0.1rem #fff, 0 0 0 -0.2rem rgb(49, 109, 221);
+  transition: box-shadow cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.btn:focus {
+  box-shadow: 0 0 0 0.2rem #fff, 0 0 0 0.4rem rgb(49, 109, 221);
+}
+
+.arrow-btn {
+  border-radius: 50%;
+  aspect-ratio: 1/1;
+  padding: 0;
+}
+
+.arrow-btn > svg {
+  width: 2rem;
+  border-radius: 50%;
+  background-color: rgba(49, 109, 221, 0.281);
+  color: rgb(49, 109, 221);
+}
+
+.surprise-btn {
+  width: 10rem;
+  margin-inline: auto;
+  padding: 0.5rem 1rem;
+  border-radius: 9999rem;
+  background-color: rgba(49, 109, 221, 0.281);
+  color: rgb(49, 109, 221);
+  border: 1px solid rgb(49, 109, 221);
+  cursor: pointer;
+}
+
+.arrow-btn:hover > svg,
+.surprise-btn:hover {
+  background-color: rgb(49, 109, 221);
+  color: white;
+}

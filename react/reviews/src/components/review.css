@@ -1,0 +1,19 @@
+img {
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  border-radius: 50%;
+  width: 13rem;
+  margin-inline: auto;
+}
+h2 {
+  text-transform: capitalize;
+}
+h3 {
+  text-transform: uppercase;
+  color: rgb(49, 109, 221);
+}
+
+.review {
+  display: grid;
+  gap: 0.5rem;
+}
