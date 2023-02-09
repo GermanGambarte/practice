@@ -17,40 +17,42 @@ const decreaseScore = () => {
   score -= 1
   $score.textContent = score
 }
+const displayMessage = (message) => ($message.textContent = message)
+const displayNumber = (value) => ($number.textContent = value)
+const setHighscore = () => {
+  highscore = score
+  $highscore.textContent = highscore
+}
 
 $checkBtn.addEventListener('click', () => {
   const guessValue = Number($guess.value)
-  if (!guessValue) $message.textContent = '🌋 No number!'
+  if (!guessValue) displayMessage('🌋 No number!')
   if (guessValue === secretNumber) {
-    $message.textContent = '🎉 Correct Number'
-    $number.textContent = secretNumber
+    displayMessage('🎉 Correct Number')
+    displayNumber(secretNumber)
     $body.style.backgroundColor = '#60b347'
     if (score > highscore) {
-      highscore = score
-      $highscore.textContent = highscore
+      setHighscore()
     }
   }
-  if (score > 1) {
-    if (guessValue > secretNumber) {
-      $message.textContent = '📈 Too High!'
+  if (guessValue !== secretNumber) {
+    if (score > 1) {
+      const message = guessValue > secretNumber ? '📈 Too High!' : '📉 Too Low!'
+      displayMessage(message)
+      decreaseScore()
+    } else {
+      displayMessage('👎🏼 You lost the game')
       decreaseScore()
     }
-    if (guessValue < secretNumber) {
-      $message.textContent = '📉 Too Low!'
-      decreaseScore()
-    }
-  } else {
-    $message.textContent = '👎🏼 You lost the game'
-    decreaseScore()
   }
 })
 
 $againBtn.addEventListener('click', () => {
-  $message.textContent = 'Start guessing...'
+  displayMessage('Start guessing...')
+  displayNumber('?')
   $body.style.backgroundColor = '#222'
   score = 20
   secretNumber = Math.floor(Math.random() * 20) + 1
   $guess.value = ''
   $score.textContent = score
-  $number.textContent = '?'
 })
