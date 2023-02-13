@@ -13,7 +13,7 @@
       referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="styles.css" />
-    <script src="script.js" defer></script>
+    <script type="module" src="script.js" defer></script>
   </head>
   <body>
     <h1 class="title">Our Reviews</h1>
@@ -26,27 +26,28 @@
           class="image-image"
           src="https://images2.imgbox.com/2e/6e/JAMvTZ56_o.jpeg"
           alt="anna johnson"
+          id="image"
         />
       </div>
       <div class="review-titles">
-        <h2 class="review-name">anna johnson</h2>
-        <h3 class="review-job">web designer</h3>
+        <h2 class="review-name" id="name">anna johnson</h2>
+        <h3 class="review-job" id="job">web designer</h3>
       </div>
-      <p class="review-description">
+      <p class="review-description" id="text">
         Helvetica artisan kinfolk thundercats lumbersexual blue bottle. Disrupt
         glossier gastropub deep v vice franzen hell of brooklyn twee enamel pin
         fashion axe.photo booth jean shorts artisan narwhal.
       </p>
-      <div class="btn-wrapper">
+      <div class="btn-wrapper" id="btn-wrapper">
         <div class="arrow-wrapper">
-          <button class="btn arrow-btn">
+          <button class="btn arrow-btn" id="left-btn">
             <i class="fa-solid fa-angle-left"></i>
           </button>
-          <button class="btn arrow-btn">
+          <button class="btn arrow-btn" id="right-btn">
             <i class="fa-solid fa-angle-right"></i>
           </button>
         </div>
-        <button class="btn surprise-btn">Surprise Me</button>
+        <button class="btn surprise-btn" id="surprise-btn">Surprise Me</button>
       </div>
     </div>
   </body>
