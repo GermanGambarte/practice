@@ -37,6 +37,10 @@ h3 {
   text-align: center;
 }
 
+i {
+  pointer-events: none;
+}
+
 ::selection {
   background-color: #58a9de;
   color: white;
